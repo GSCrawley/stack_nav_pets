@@ -11,7 +11,8 @@ function Cell({ title, showDetails  }) {
             >
 
         <Text
-            style={{ fontSize: 20 }}>{ title }</Text>
+            style={{ fontSize: 20 }}
+            >{ title }</Text>
         </TouchableHighlight>
     )
 }

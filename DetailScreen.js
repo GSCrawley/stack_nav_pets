@@ -3,29 +3,22 @@ import { Text, View, Button } from 'react-native';
 
 
 export default function DetailScreen( { route, navigation }) {
+    const { item } = route.params;
+    const keys = Object.keys(item).filter(key => key != 'breed')
 
-    const { id, value, name } = route.params;
 
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgreen' }}>
-        <Text style= {{ fontSize: 30 }}>Details Screen id: { id } </Text>
+        <Text style= {{ fontSize: 30 }}>Breed: { item.breed } </Text>
 
-        <Button 
-          title="More Details"
-          onPress={() => navigation.push('Details', { 
-            id: id + 1, 
-          })}
+        {keys.map(key => <Text style= {{ fontSize: 20  }}>{key} : {item[key]}</Text>)}
         
-          />
 
           <Button
             title ="Go Home"
             onPress={() => navigation.navigate('Home')}
             />
-
-          <Button 
-            title="Go Back" 
-            onPress={() => navigation.goBack()} /> 
+ 
 
         </View>
   );

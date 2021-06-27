@@ -16,7 +16,7 @@ function HomeScreen({ navigation }) {
           return (
           <Cell 
           title={ item.breed } 
-          showDetails={() => navigation.navigate('Details', { id: 1 })} 
+          showDetails={() => navigation.navigate('Details', { item })} 
           />
           )
         }}
