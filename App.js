@@ -13,7 +13,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-          initialRouteName="Home"
+          initialRouteName="Breeds"
           screenOptions={{
             headerStyle: {
               backgroundColor: '#f4511e',
@@ -21,13 +21,13 @@ function App() {
             headerTintColor: '#fff',
             headerTitleStyle: {
               fontWeight: 'bold',
-              fontSize: 30 
-
+              fontSize: 30, 
+              color: 'darkblue'
             },
           }}
         >
       <Stack.Screen 
-        name="Home" 
+        name="Breeds" 
         component={ HomeScreen }   
         />
       <Stack.Screen 

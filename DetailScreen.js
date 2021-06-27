@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Text, View, Button } from 'react-native';
+import FeatureView from './FeatureView'
 
 
 export default function DetailScreen( { route, navigation }) {
@@ -8,15 +9,14 @@ export default function DetailScreen( { route, navigation }) {
 
 
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgreen' }}>
-        <Text style= {{ fontSize: 30 }}>Breed: { item.breed } </Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightblue' }}>
+        <Text style= {{ fontSize: 32, margin: 10, color: 'darkblue' }}> { item.breed } </Text>
 
-        {keys.map(key => <Text style= {{ fontSize: 20  }}>{key} : {item[key]}</Text>)}
-        
+        {keys.map(key => <FeatureView name={key} value={item[key]} />)}
 
           <Button
-            title ="Go Home"
-            onPress={() => navigation.navigate('Home')}
+            title ="Breeds List"
+            onPress={() => navigation.navigate('Breeds')}
             />
  
 
