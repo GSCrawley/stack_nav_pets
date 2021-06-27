@@ -1,17 +1,29 @@
 import * as React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View, FlatList } from 'react-native';
 import DetailScreen from './DetailScreen'
+import Cell from './Cell'
 
-export default function HomeScreen({ navigation }) {
+import { cats } from './breeds'
+// import { isNotEmittedStatement } from 'typescript';
+
+function HomeScreen({ navigation }) {
   return (
     <View style ={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style= {{ fontSize: 30 }}>Home Screen</Text>
-      <Button
-        title = "Go to Details"
-        onPress={ () => navigation.navigate('Details', {
-          id: 0
-        })}
+      <FlatList
+        style={{ flex:1, width:'100%'}}
+        data= {cats}
+        renderItem= {( {item, index} ) => {
+          return (
+          <Cell 
+          title={ item.breed } 
+          showDetails={() => navigation.navigate('Details', { id: 1 })} 
+          />
+          )
+        }}
+        keyExtractor={(item) => item.breed}
       />
     </View>
   );
 }
+
+export default HomeScreen

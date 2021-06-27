@@ -4,18 +4,18 @@ import { Text, View, Button } from 'react-native';
 
 export default function DetailScreen( { route, navigation }) {
 
-    const { itemId, backgroundColor } = route.params;
+    const { id, value, name } = route.params;
 
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgreen' }}>
-        <Text style= {{ fontSize: 30 }, { backgroundColor }}>Details Screen id: { itemId } </Text>
+        <Text style= {{ fontSize: 30 }}>Details Screen id: { id } </Text>
 
         <Button 
           title="More Details"
           onPress={() => navigation.push('Details', { 
-            itemId: Math.floor(Math.random() * 100), 
-          })
-        }
+            id: id + 1, 
+          })}
+        
           />
 
           <Button
