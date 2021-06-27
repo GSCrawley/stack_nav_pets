@@ -13,49 +13,31 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-	initialRouteName="Home"
-	screenOptions={{
-		headerStyle: {
-			backgroundColor: '#f4511e',
-		},
-		headerTintColor: '#fff',
-		headerTitleStyle: {
-			fontWeight: 'bold',
-      fontSize: 24
+          initialRouteName="Home"
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30 
 
-		},
-	}}
->
-      <Stack.Screen name="Home" component={HomeScreen} 
-  options={{ 
-    title: "Hello World",
-    headerStyle: {
-      backgroundColor: '#f4511e',
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-      fontSize: 24
-    }
-  }}
-/>
-        <Stack.Screen name="Details" component={DetailScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+            },
+          }}
+        >
+      <Stack.Screen 
+        name="Home" 
+        component={ HomeScreen }   
+        />
+      <Stack.Screen 
+      name="Details" 
+      component={ DetailScreen } />
+    </Stack.Navigator>
+  </NavigationContainer>
+);
 }
 
-// const style = StyleSheet.create({
-//   NavigationContainer: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   name: {
-//     justifyContent: 'center',
-//   }
-// });
 
 
 
