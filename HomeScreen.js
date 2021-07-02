@@ -9,20 +9,19 @@ function HomeScreen({ navigation }) {
   const [ showCats, setshowCats ] = useState(false);
 
   return (
-    <View style ={{ flex: 1, width:'100%', height: '90%', alignItems: 'center', justifyContent: 'center'
+    <View style ={{ flex: 1, width:'100%', height: '90%', alignItems: 'center', justifyContent: 'center', backgroundColor:'pink'
   }}>
-      {/* <SafeAreaView> */}
-                <View style={{margin: 10}}>
+      <SafeAreaView>
+                <View style={{margin: 10, backgroundColor:'white'}}>
                   <Button
                     title="Switch Species"
-                    // color="#841584"
                     onPress={() => {
                       setshowCats(!showCats);
                     }}
                   />
 					  </View>
       <FlatList
-        style={{ flex:1, backgroundColor:'lightblue' }}
+        style={{ flex:1, padding: 110, paddingTop: 20, marginBottom:40, backgroundColor:'lightblue' }}
         data= {showCats ? cats : dogs}
         renderItem= {( {item, index} ) => {
           return (
@@ -36,7 +35,7 @@ function HomeScreen({ navigation }) {
         }}
         keyExtractor={(item) => item.breed}
       />
-     {/* </SafeAreaView> */}
+     </SafeAreaView>
     </View>
   );
 }

@@ -6,24 +6,24 @@ export default function FeatureView({ name, value }) {
             <View style={{ 
                 justifyContent: 'space-between', 
                 flexDirection: 'row',
-                // backgroundColor: 'pink',
+                backgroundColor: 'pink',
                 width: '80%',
-                marginRight: 20 ,
-                marginLeft: 20,
-                padding: 10,
-                paddingRight:20,
-                paddingLeft:20,
+                // marginRight: 20 ,
+                // marginLeft: 20,
+                padding: 5,
+                paddingRight:80,
+                paddingLeft:80,
                 
                 }}>
             
                 <Text style={{
                     fontSize: 16,
-                    color: 'darkorange'
+                    color: 'darkblue'
                 }}>{name}</Text> 
 
                 <Text style={{
                     fontSize: 18,
-                    color: 'darkorange'
+                    color: 'darkblue'
                 }}>{value}</Text>
              
             </View>

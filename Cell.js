@@ -11,8 +11,7 @@ function Cell({ title, showDetails  }) {
             underlayColor="orange"
             >
 
-        <Text
-            >{ title }</Text>
+        <Text>{ title }</Text>
         </TouchableHighlight>
     )
 }
