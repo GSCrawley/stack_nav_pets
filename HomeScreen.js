@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Text, View, FlatList, Button, SafeAreaView } from 'react-native';
 import DetailScreen from './DetailScreen'
 import Cell from './Cell'

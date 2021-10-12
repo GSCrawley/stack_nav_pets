@@ -1,86 +1,12 @@
 # native_navigation
 
-### the following code is ' Button.js ' which i may implement later but for now am deleting from the project: 
+### this is the by_breed app with Stack Navigation; the button at the top of the screen switches between lists of cat and dog breeds. Touching a breed name brings you to the Detail screen. However, the details are not rendering and i can't figure out how to fix it.  This is the error message I'm getting:
 
-<!-- import React from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
-
-export default function Button(navigation) {
-  const { onPress } = ;
-  return (
-    <Pressable style={styles.button} onPress={onPress, title = { title }}>
-      <Text style={styles.text}>{title}</Text>
-    </Pressable>
-  );
+## VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc. 
+### Object { "contentLength": 6877.00048828125,"dt": 4514, "prevDt": 8336,
 }
 
-const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
-    marginTop: 108,
-    marginLeft: 84,
-    marginRight: 84
-  },
-  text: {
-    fontSize: 20,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'white',
-  },
-}); -->
+### I also built the same app using Tab Navigation rather than Stack Navigation, and the same thing is occuring with the Details Screen, and i'm getting the same message
 
-<!-- 
-     const { onPress } =  navigation.push('Details', {
-                    itemId = Math.floor(Math.random() * 100),
-                    backgroundColor = 'red'
-          });
-            return (
-              <Pressable style={styles.Button} onPress={onPress, title = 'Details'}>
-                <Text style={styles.text}>{title}</Text>
-              </Pressable>
 
-              const styles = StyleSheet.create({
-                    Pressable: {
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      paddingVertical: 12,
-                      paddingHorizontal: 32,
-                      borderRadius: 4,
-                      elevation: 3,
-                      backgroundColor: 'red',
-                    },
-                    text: {
-                      fontSize: 16,
-                      lineHeight: 21,
-                      fontWeight: 'bold',
-                      letterSpacing: 0.25,
-                      color: 'white',
-                    },
-                  
-                });       
-             } 
-             
-             
 
-    // Button(navigation) ;{
-    //   <View style ={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    //   const { onPress } = navigation.push;
-    //   return (
-    //     <Pressable style={styles.button} onPress={onPress, title = 'Details'}>
-    //       <Text style={styles.text}>{title}</Text>
-    //     </Pressable>
-      
-    //     </View>
-    
-
-//     },
-// });
-
--->
